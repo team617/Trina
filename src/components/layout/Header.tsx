@@ -21,20 +21,20 @@ export default function Header() {
       <nav className="container-custom py-4 md:py-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-4">
             <Image
               src="/brand/mark.svg"
               alt={`${content.site.title} logo mark`}
-              width={36}
-              height={36}
+              width={48}
+              height={48}
               priority
             />
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-start text-left">
               <Image
                 src="/brand/wordmark-horizontal.svg"
                 alt={`${content.site.title} logo`}
-                width={200}
-                height={48}
+                width={220}
+                height={52}
                 priority
               />
               <span className="font-inter text-xs text-soft-clay tracking-wider uppercase mt-1">
