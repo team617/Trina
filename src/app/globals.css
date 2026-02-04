@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font Faces */
+@font-face {
+  font-family: 'Rustique';
+  src: url('/fonts/Rustique Serif.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rustique';
+  src: url('/fonts/Rustique Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter Variable';
+  src: url('/fonts/Inter-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CSS Variables */
+:root {
+  --font-rustique: 'Rustique', serif;
+  --font-inter: 'Inter Variable', sans-serif;
+
+  --color-white-coral: #f8f0e9;
+  --color-soft-clay: #c09c80;
+  --color-dark-kakao: #34231a;
+  --color-warm-sand: #d1bca8;
+  --color-deep-reef: #014544;
+  --color-soft-sea: #abc6b5;
+
+  --texture-1: url('/textures/texture-1.jpg');
+  --texture-2: url('/textures/texture-2.jpg');
+  --texture-3: url('/textures/texture-3.jpg');
+  --texture-fabric-clay: url('/textures/fabric-clay.jpg');
+  --texture-fabric-white-coral: url('/textures/fabric-white-coral.jpg');
+  --texture-fabric-sand: url('/textures/fabric-sand.jpg');
+  --texture-fabric-kakao: url('/textures/fabric-kakao.jpg');
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--color-dark-kakao);
+  background: radial-gradient(120% 120% at 10% 10%, #f8f0e9 0%, #f1e7de 55%, #eadfd4 100%);
+  font-family: var(--font-inter);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-rustique);
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* Utility Classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container-custom {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-custom {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .bg-texture-1 {
+    background-image: var(--texture-1);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bg-texture-2 {
+    background-image: var(--texture-2);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bg-texture-3 {
+    background-image: var(--texture-3);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bg-texture-fabric-clay {
+    background-image: var(--texture-fabric-clay);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bg-texture-fabric-white-coral {
+    background-image: var(--texture-fabric-white-coral);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bg-texture-fabric-sand {
+    background-image: var(--texture-fabric-sand);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bg-texture-fabric-kakao {
+    background-image: var(--texture-fabric-kakao);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Focus Styles for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-deep-reef);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-soft-sea);
+  color: var(--color-dark-kakao);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
