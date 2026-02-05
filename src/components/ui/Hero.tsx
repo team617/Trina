@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Image from 'next/image'
 import Container from '@/components/ui/Container'
 
 interface HeroProps {
@@ -9,6 +10,8 @@ interface HeroProps {
   centered?: boolean
   eyebrow?: string
   texture?: 'texture-1' | 'texture-2' | 'texture-3' | 'fabric-clay' | 'fabric-white-coral' | 'fabric-sand' | 'fabric-kakao' | 'water-wash'
+  imageSrc?: string
+  imageAlt?: string
 }
 
 export default function Hero({
@@ -19,6 +22,8 @@ export default function Hero({
   centered = true,
   eyebrow,
   texture,
+  imageSrc,
+  imageAlt = '',
 }: HeroProps) {
   const bgColors = {
     'white-coral': 'bg-white-coral',
@@ -37,13 +42,34 @@ export default function Hero({
     'water-wash': 'bg-water-wash',
   }
 
+  const overlayClass = imageSrc
+    ? 'bg-white-coral/70'
+    : texture === 'water-wash'
+      ? 'bg-white-coral/35'
+      : 'bg-white-coral/60'
+
   return (
     <section className={`relative overflow-hidden ${bgColors[background]} py-20 md:py-28 lg:py-36`}>
+      {imageSrc && (
+        <div className="absolute inset-0">
+          <Image
+            src={imageSrc}
+            alt={imageAlt}
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
+          />
+        </div>
+      )}
       {texture && (
         <>
           <div className={`absolute inset-0 ${textureClasses[texture]} opacity-50`} aria-hidden />
-          <div className="absolute inset-0 bg-white-coral/70" aria-hidden />
+          <div className={`absolute inset-0 ${overlayClass}`} aria-hidden />
         </>
+      )}
+      {!texture && imageSrc && (
+        <div className={`absolute inset-0 ${overlayClass}`} aria-hidden />
       )}
       <Container className={centered ? 'text-center' : ''}>
         {eyebrow && (

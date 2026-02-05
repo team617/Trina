@@ -70,7 +70,8 @@ export default function Home() {
         title={content.coreMessage.primary}
         subtitle={content.coreMessage.secondary}
         eyebrow="Integrative Alignment Guide"
-        texture="water-wash"
+        imageSrc="https://cdn.pixabay.com/photo/2019/09/18/14/45/water-4483886_1280.jpg"
+        imageAlt="Calm water surface with warm light"
         centered
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
