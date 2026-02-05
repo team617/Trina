@@ -25,8 +25,8 @@ export default function Header() {
             <Image
               src="/brand/mark.svg"
               alt={`${content.site.title} logo mark`}
-              width={48}
-              height={48}
+              width={56}
+              height={56}
               priority
             />
             <div className="flex flex-col items-start text-left">
@@ -49,7 +49,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="font-inter text-sm text-dark-kakao hover:text-soft-clay transition-colors"
+                className="font-inter text-sm text-dark-kakao hover:text-soft-clay transition-colors relative after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-soft-clay after:transition-all after:duration-300 hover:after:w-full"
               >
                 {item.name}
               </Link>

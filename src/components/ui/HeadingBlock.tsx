@@ -27,7 +27,7 @@ export default function HeadingBlock({
           {title}
         </h2>
         {subtitle && (
-          <p className="font-inter text-lg text-dark-kakao/70 max-w-3xl mx-auto">
+          <p className="font-inter text-lg text-dark-kakao/80 max-w-3xl mx-auto">
             {subtitle}
           </p>
         )}

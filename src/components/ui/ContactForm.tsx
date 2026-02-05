@@ -19,7 +19,7 @@ export default function ContactForm() {
           <input
             name="name"
             required
-            className="w-full rounded-lg border border-warm-sand/40 bg-white/80 px-4 py-3 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-deep-reef"
+            className="w-full rounded-xl border border-warm-sand/40 bg-white/90 px-4 py-3 font-inter text-sm shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-deep-reef"
             placeholder="Your name"
           />
         </label>
@@ -29,7 +29,7 @@ export default function ContactForm() {
             type="email"
             name="email"
             required
-            className="w-full rounded-lg border border-warm-sand/40 bg-white/80 px-4 py-3 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-deep-reef"
+            className="w-full rounded-xl border border-warm-sand/40 bg-white/90 px-4 py-3 font-inter text-sm shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-deep-reef"
             placeholder="you@email.com"
           />
         </label>
@@ -39,7 +39,7 @@ export default function ContactForm() {
         <span className="font-inter text-sm text-dark-kakao/80">I’m interested in</span>
         <select
           name="interest"
-          className="w-full rounded-lg border border-warm-sand/40 bg-white/80 px-4 py-3 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-deep-reef"
+          className="w-full rounded-xl border border-warm-sand/40 bg-white/90 px-4 py-3 font-inter text-sm shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-deep-reef"
           defaultValue=""
           required
         >
@@ -56,7 +56,7 @@ export default function ContactForm() {
         <textarea
           name="message"
           rows={5}
-          className="w-full rounded-lg border border-warm-sand/40 bg-white/80 px-4 py-3 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-deep-reef"
+          className="w-full rounded-xl border border-warm-sand/40 bg-white/90 px-4 py-3 font-inter text-sm shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-deep-reef"
           placeholder="Share a little about what you’re seeking. You can keep it simple."
         />
       </label>

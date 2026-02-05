@@ -12,6 +12,7 @@ import Testimonials from '@/components/ui/Testimonials'
 import Callout from '@/components/ui/Callout'
 import IconRow from '@/components/ui/IconRow'
 import HeadingBlock from '@/components/ui/HeadingBlock'
+import Marquee from '@/components/ui/Marquee'
 import Image from 'next/image'
 
 export const metadata = createMetadata({
@@ -51,13 +52,25 @@ export default function Home() {
     },
   ]
 
+  const flowWords = [
+    'Alignment',
+    'Stability',
+    'Stillness',
+    'Body',
+    'Mind',
+    'Heart',
+    'Presence',
+    'Clarity',
+    'Ease',
+  ]
+
   return (
     <>
       <Hero
         title={content.coreMessage.primary}
         subtitle={content.coreMessage.secondary}
         eyebrow="Integrative Alignment Guide"
-        texture="fabric-white-coral"
+        texture="water-wash"
         centered
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -79,11 +92,11 @@ export default function Home() {
               subtitle="We work with the body, the mind, and the heart as an interconnected whole."
               align="left"
             />
-            <p className="font-inter text-lg text-dark-kakao/80 leading-relaxed">
+            <p className="font-inter text-lg text-dark-kakao/90 leading-relaxed">
               Many people feel disconnected and out of alignment with themselves, leading to anxiety and a sense of
               unfulfillment. This work begins by listening — to the body, the mind, and the quiet pull of the heart.
             </p>
-            <p className="font-inter text-lg text-dark-kakao/80 leading-relaxed">
+            <p className="font-inter text-lg text-dark-kakao/90 leading-relaxed">
               When we create alignment on all levels, we build a foundation where ease, clarity, and joy can naturally
               arise. Not through force, but through presence, care, and steady practice.
             </p>
@@ -118,6 +131,15 @@ export default function Home() {
           align="center"
         />
         <IconRow items={whoFor} />
+      </Section>
+
+      <Section spacing="md" texture="water-wash" centered divider eyebrow="Motion & Flow">
+        <HeadingBlock
+          title="A gentle rhythm, not a push"
+          subtitle="We move in cycles, not straight lines — allowing space for integration."
+          align="center"
+        />
+        <Marquee items={flowWords} />
       </Section>
 
       <Section spacing="lg" texture="texture-3" centered divider eyebrow="What you get">
@@ -228,8 +250,8 @@ export default function Home() {
           <Image
             src="/illustrations/quote-spiral-1.svg"
             alt="Spiral quote illustration"
-            width={120}
-            height={120}
+            width={200}
+            height={200}
             className="mx-auto"
           />
           <blockquote className="font-rustique text-3xl md:text-4xl text-soft-clay leading-tight">

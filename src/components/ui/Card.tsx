@@ -28,9 +28,9 @@ export default function Card({
     sea: 'bg-soft-sea/10',
   }
 
-  const hoverStyles = hover ? 'hover:shadow-xl hover:-translate-y-1 transition-all duration-300' : ''
+  const hoverStyles = hover ? 'hover:shadow-2xl hover:-translate-y-1.5 hover:scale-[1.01] transition-all duration-300' : ''
 
-  const className = `${paddingStyles[padding]} ${bgStyles[background]} ${hoverStyles} rounded-2xl shadow-sm border border-warm-sand/20`
+  const className = `${paddingStyles[padding]} ${bgStyles[background]} ${hoverStyles} rounded-2xl shadow-md border border-warm-sand/20 backdrop-blur-[2px]`
 
   if (href) {
     return (

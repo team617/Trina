@@ -9,8 +9,8 @@ interface SectionProps {
   spacing?: 'sm' | 'md' | 'lg'
   centered?: boolean
   id?: string
-  texture?: 'texture-1' | 'texture-2' | 'texture-3' | 'fabric-clay' | 'fabric-white-coral' | 'fabric-sand' | 'fabric-kakao'
-  textureOpacity?: 'light' | 'medium'
+  texture?: 'texture-1' | 'texture-2' | 'texture-3' | 'fabric-clay' | 'fabric-white-coral' | 'fabric-sand' | 'fabric-kakao' | 'water-wash'
+  textureOpacity?: 'light' | 'medium' | 'none'
   divider?: boolean
   eyebrow?: string
 }
@@ -42,11 +42,13 @@ export default function Section({
     'fabric-white-coral': 'bg-texture-fabric-white-coral',
     'fabric-sand': 'bg-texture-fabric-sand',
     'fabric-kakao': 'bg-texture-fabric-kakao',
+    'water-wash': 'bg-water-wash',
   }
 
   const overlayClasses = {
-    light: 'bg-white-coral/80',
-    medium: 'bg-white-coral/60',
+    light: 'bg-white-coral/85',
+    medium: 'bg-white-coral/70',
+    none: 'bg-transparent',
   }
 
   const spacingStyles = {
@@ -66,7 +68,7 @@ export default function Section({
       <Container className={centered ? 'text-center' : ''}>
         {divider && (
           <div className="mb-10 flex justify-center">
-            <span className="h-px w-16 bg-soft-clay/50" aria-hidden />
+            <span className="h-px w-16 bg-soft-clay/60" aria-hidden />
           </div>
         )}
         {eyebrow && (
@@ -80,7 +82,7 @@ export default function Section({
           </h2>
         )}
         {subtitle && (
-          <p className="font-inter text-lg text-dark-kakao/70 max-w-3xl mx-auto mb-12 text-balance">
+          <p className="font-inter text-lg text-dark-kakao/80 max-w-3xl mx-auto mb-12 text-balance">
             {subtitle}
           </p>
         )}

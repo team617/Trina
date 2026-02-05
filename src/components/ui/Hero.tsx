@@ -8,7 +8,7 @@ interface HeroProps {
   background?: 'white-coral' | 'warm-sand' | 'soft-sea'
   centered?: boolean
   eyebrow?: string
-  texture?: 'texture-1' | 'texture-2' | 'texture-3' | 'fabric-clay' | 'fabric-white-coral' | 'fabric-sand' | 'fabric-kakao'
+  texture?: 'texture-1' | 'texture-2' | 'texture-3' | 'fabric-clay' | 'fabric-white-coral' | 'fabric-sand' | 'fabric-kakao' | 'water-wash'
 }
 
 export default function Hero({
@@ -34,6 +34,7 @@ export default function Hero({
     'fabric-white-coral': 'bg-texture-fabric-white-coral',
     'fabric-sand': 'bg-texture-fabric-sand',
     'fabric-kakao': 'bg-texture-fabric-kakao',
+    'water-wash': 'bg-water-wash',
   }
 
   return (

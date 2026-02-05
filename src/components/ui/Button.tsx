@@ -22,12 +22,12 @@ export default function Button({
   type = 'button',
   disabled = false,
 }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center font-inter font-normal transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-deep-reef focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed'
+  const baseStyles = 'inline-flex items-center justify-center font-inter font-normal transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-deep-reef focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed hover:-translate-y-0.5'
 
   const variantStyles = {
-    primary: 'bg-soft-clay text-white-coral shadow-sm hover:bg-soft-clay/90 hover:shadow-md',
-    secondary: 'bg-deep-reef text-white-coral shadow-sm hover:bg-deep-reef/90 hover:shadow-md',
-    outline: 'border border-soft-clay text-soft-clay hover:bg-soft-clay hover:text-white-coral',
+    primary: 'bg-soft-clay text-white-coral shadow-md hover:bg-soft-clay/90 hover:shadow-lg',
+    secondary: 'bg-deep-reef text-white-coral shadow-md hover:bg-deep-reef/90 hover:shadow-lg',
+    outline: 'border border-soft-clay text-soft-clay hover:bg-soft-clay hover:text-white-coral hover:shadow-md',
   }
 
   const sizeStyles = {

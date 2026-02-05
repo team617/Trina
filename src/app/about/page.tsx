@@ -138,8 +138,15 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section spacing="lg" background="warm-sand" texture="fabric-kakao" centered divider>
+      <Section spacing="lg" background="warm-sand" texture="fabric-kakao" textureOpacity="none" centered divider>
         <blockquote className="max-w-3xl mx-auto text-center">
+          <Image
+            src="/illustrations/quote-spiral-2.svg"
+            alt="Spiral quote illustration"
+            width={200}
+            height={200}
+            className="mx-auto mb-6"
+          />
           <p className="font-rustique text-3xl md:text-4xl text-white-coral leading-tight">
             “{content.quotes.capability}”
           </p>

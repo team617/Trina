@@ -30,6 +30,7 @@ export default function ApproachPage() {
         title="Your body is a doorway"
         subtitle="Alignment, stability, and stillness are a continuous movement — a spiral that supports body, mind, and heart."
         eyebrow="My Approach"
+        texture="water-wash"
       />
 
       <Section spacing="lg" texture="texture-2" textureOpacity="medium" divider>
@@ -67,7 +68,7 @@ export default function ApproachPage() {
         </div>
       </Section>
 
-      <Section spacing="lg" background="warm-sand" texture="fabric-kakao" centered divider>
+      <Section spacing="lg" background="warm-sand" texture="fabric-kakao" textureOpacity="none" centered divider>
         <blockquote className="max-w-3xl mx-auto text-center">
           <p className="font-rustique text-3xl md:text-4xl text-white-coral leading-tight">
             “{content.quotes.misalignment}”

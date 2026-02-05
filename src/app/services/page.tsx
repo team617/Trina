@@ -140,7 +140,7 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      <Section spacing="lg" background="warm-sand" texture="fabric-kakao" centered divider>
+      <Section spacing="lg" background="warm-sand" texture="fabric-kakao" textureOpacity="none" centered divider>
         <p className="font-inter text-xs uppercase tracking-[0.3em] text-soft-clay mb-4">Your journey</p>
         <h2 className="font-rustique text-3xl md:text-4xl text-white-coral mb-6">
           Where will you begin?
