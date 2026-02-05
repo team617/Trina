@@ -41,3 +41,4 @@ To wire it to an email provider later:
 
 Logos and textures are sourced from the provided brand files and copied into `public/` for optimized usage.
 
+# soulwalkweb
