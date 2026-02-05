@@ -49,8 +49,8 @@ export default function AboutPage() {
             <div className="absolute -top-6 right-6 h-24 w-24 rounded-full bg-soft-sea/40" />
             <div className="relative overflow-hidden rounded-2xl border border-warm-sand/30 bg-white/70 p-6">
               <Image
-                src="https://cdn.pixabay.com/photo/2018/11/30/18/42/sunset-3816247_1280.jpg"
-                alt="Soft horizon at sunset over the water"
+                src="/textures/texture-2.jpg"
+                alt="Soft watercolor texture in warm tones"
                 width={600}
                 height={720}
                 className="rounded-xl object-cover"

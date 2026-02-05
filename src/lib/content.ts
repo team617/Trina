@@ -28,7 +28,7 @@ export const content = {
   coreMessage: {
     primary: 'Align body, mind, and heart.',
     secondary:
-      'A grounded, integrative path to help you build stability, access clarity, and move forward with heart-led direction.',
+      'A grounded, integrative path to build stability, access clarity, and move forward with heart-led direction.',
   },
 
   brandPillars: [
