@@ -1,7 +1,7 @@
 import { createMetadata } from '@/lib/metadata'
 import { content } from '@/lib/content'
 import { getBreadcrumbSchema } from '@/lib/structured-data'
-import Hero from '@/components/ui/Hero'
+import PageHeader from '@/components/ui/PageHeader'
 import Section from '@/components/ui/Section'
 import Pillar from '@/components/ui/Pillar'
 import ProcessSteps from '@/components/ui/ProcessSteps'
@@ -26,15 +26,13 @@ export default function ApproachPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
 
-      <Hero
+      <PageHeader
         title="Your body is a doorway"
         subtitle="Alignment, stability, and stillness are a continuous movement — a spiral that supports body, mind, and heart."
         eyebrow="My Approach"
-        texture="fabric-white-coral"
-        centered
       />
 
-      <Section spacing="lg" texture="texture-2" textureOpacity="medium">
+      <Section spacing="lg" texture="texture-2" textureOpacity="medium" divider>
         <div className="max-w-3xl mx-auto space-y-6 font-inter text-lg text-dark-kakao/80 leading-relaxed">
           <h2 className="font-rustique text-3xl md:text-4xl text-dark-kakao">
             Alignment, stability, and stillness
@@ -60,6 +58,7 @@ export default function ApproachPage() {
         background="warm-sand"
         texture="fabric-sand"
         centered={false}
+        divider
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
           {content.brandPillars.map((pillar) => (
@@ -68,7 +67,7 @@ export default function ApproachPage() {
         </div>
       </Section>
 
-      <Section spacing="lg" background="warm-sand" texture="fabric-kakao" centered>
+      <Section spacing="lg" background="warm-sand" texture="fabric-kakao" centered divider>
         <blockquote className="max-w-3xl mx-auto text-center">
           <p className="font-rustique text-3xl md:text-4xl text-white-coral leading-tight">
             “{content.quotes.misalignment}”
@@ -76,7 +75,7 @@ export default function ApproachPage() {
         </blockquote>
       </Section>
 
-      <Section spacing="lg" texture="texture-1" centered={false}>
+      <Section spacing="lg" texture="texture-1" centered={false} divider>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 font-inter text-lg text-dark-kakao/80 leading-relaxed">
             <p className="font-inter text-xs uppercase tracking-[0.3em] text-soft-clay">The unique approach</p>
@@ -106,7 +105,7 @@ export default function ApproachPage() {
         </div>
       </Section>
 
-      <Section spacing="lg" centered texture="texture-3">
+      <Section spacing="lg" centered texture="texture-3" divider>
         <h2 className="font-rustique text-3xl md:text-4xl text-dark-kakao mb-6">
           How I work
         </h2>
@@ -128,7 +127,7 @@ export default function ApproachPage() {
         </div>
       </Section>
 
-      <Section spacing="lg" background="warm-sand" texture="fabric-clay" centered>
+      <Section spacing="lg" background="warm-sand" texture="fabric-clay" centered divider>
         <h2 className="font-rustique text-3xl md:text-4xl text-dark-kakao mb-6">
           Ready to begin?
         </h2>

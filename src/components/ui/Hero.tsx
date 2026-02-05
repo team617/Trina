@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Container from '@/components/ui/Container'
 
 interface HeroProps {
   title: string
@@ -36,29 +37,29 @@ export default function Hero({
   }
 
   return (
-    <section className={`relative overflow-hidden ${bgColors[background]} py-16 md:py-24 lg:py-32`}>
+    <section className={`relative overflow-hidden ${bgColors[background]} py-20 md:py-28 lg:py-36`}>
       {texture && (
         <>
           <div className={`absolute inset-0 ${textureClasses[texture]} opacity-50`} aria-hidden />
           <div className="absolute inset-0 bg-white-coral/70" aria-hidden />
         </>
       )}
-      <div className={`relative container-custom ${centered ? 'text-center' : ''}`}>
+      <Container className={centered ? 'text-center' : ''}>
         {eyebrow && (
-          <p className="font-inter text-xs uppercase tracking-[0.3em] text-soft-clay mb-4">
+          <p className="font-inter text-xs uppercase tracking-[0.35em] text-soft-clay mb-5">
             {eyebrow}
           </p>
         )}
-        <h1 className="font-rustique text-4xl md:text-5xl lg:text-6xl text-dark-kakao mb-6 text-balance">
+        <h1 className="font-rustique text-4xl md:text-6xl lg:text-7xl text-dark-kakao mb-6 text-balance">
           {title}
         </h1>
         {subtitle && (
-          <p className="font-inter text-lg md:text-xl text-dark-kakao/80 max-w-3xl mx-auto mb-8 text-balance">
+          <p className="font-inter text-lg md:text-xl text-dark-kakao/80 max-w-3xl mx-auto mb-10 text-balance">
             {subtitle}
           </p>
         )}
         {children && <div className="mt-8">{children}</div>}
-      </div>
+      </Container>
     </section>
   )
 }

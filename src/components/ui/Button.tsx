@@ -22,18 +22,18 @@ export default function Button({
   type = 'button',
   disabled = false,
 }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center font-inter font-light transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-deep-reef focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed'
+  const baseStyles = 'inline-flex items-center justify-center font-inter font-normal transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-deep-reef focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed'
 
   const variantStyles = {
-    primary: 'bg-soft-clay text-white-coral hover:bg-soft-clay/90',
-    secondary: 'bg-deep-reef text-white-coral hover:bg-deep-reef/90',
-    outline: 'border-2 border-soft-clay text-soft-clay hover:bg-soft-clay hover:text-white-coral',
+    primary: 'bg-soft-clay text-white-coral shadow-sm hover:bg-soft-clay/90 hover:shadow-md',
+    secondary: 'bg-deep-reef text-white-coral shadow-sm hover:bg-deep-reef/90 hover:shadow-md',
+    outline: 'border border-soft-clay text-soft-clay hover:bg-soft-clay hover:text-white-coral',
   }
 
   const sizeStyles = {
-    sm: 'px-4 py-2 text-sm rounded-md',
-    md: 'px-6 py-3 text-base rounded-lg',
-    lg: 'px-8 py-4 text-lg rounded-lg',
+    sm: 'px-4 py-2 text-sm rounded-full',
+    md: 'px-6 py-3 text-base rounded-full',
+    lg: 'px-8 py-4 text-lg rounded-full',
   }
 
   const widthStyle = fullWidth ? 'w-full' : ''

@@ -1,7 +1,7 @@
 import { createMetadata } from '@/lib/metadata'
 import { content } from '@/lib/content'
 import { getBreadcrumbSchema, getServiceSchema } from '@/lib/structured-data'
-import Hero from '@/components/ui/Hero'
+import PageHeader from '@/components/ui/PageHeader'
 import Section from '@/components/ui/Section'
 import Button from '@/components/ui/Button'
 
@@ -29,15 +29,13 @@ export default function GroupYogaClassesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
-      <Hero
+      <PageHeader
         title="Group Yoga Classes"
         subtitle={content.services.groupYoga.summary}
         eyebrow="Service"
-        texture="fabric-white-coral"
-        centered
       />
 
-      <Section spacing="lg" texture="texture-2" textureOpacity="medium">
+      <Section spacing="lg" texture="texture-2" textureOpacity="medium" divider>
         <div className="max-w-4xl mx-auto space-y-8">
           <h2 className="font-rustique text-3xl md:text-4xl text-dark-kakao">
             A calm, alignment-based practice
@@ -52,7 +50,7 @@ export default function GroupYogaClassesPage() {
         </div>
       </Section>
 
-      <Section spacing="lg" background="warm-sand" texture="fabric-sand">
+      <Section spacing="lg" background="warm-sand" texture="fabric-sand" divider>
         <div className="max-w-4xl mx-auto">
           <h2 className="font-rustique text-3xl md:text-4xl text-dark-kakao mb-8">
             This is for you if
@@ -65,7 +63,7 @@ export default function GroupYogaClassesPage() {
         </div>
       </Section>
 
-      <Section spacing="lg" texture="texture-1">
+      <Section spacing="lg" texture="texture-1" divider>
         <div className="max-w-4xl mx-auto space-y-6">
           <h2 className="font-rustique text-3xl md:text-4xl text-dark-kakao">
             Class details
@@ -104,7 +102,7 @@ export default function GroupYogaClassesPage() {
         </div>
       </Section>
 
-      <Section spacing="lg" background="warm-sand" texture="fabric-clay" centered>
+      <Section spacing="lg" background="warm-sand" texture="fabric-clay" centered divider>
         <h2 className="font-rustique text-3xl md:text-4xl text-dark-kakao mb-6">
           Ready to explore?
         </h2>

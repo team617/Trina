@@ -1,7 +1,7 @@
 import { createMetadata } from '@/lib/metadata'
 import { content } from '@/lib/content'
 import { getBreadcrumbSchema } from '@/lib/structured-data'
-import Hero from '@/components/ui/Hero'
+import PageHeader from '@/components/ui/PageHeader'
 import Section from '@/components/ui/Section'
 import ContactForm from '@/components/ui/ContactForm'
 
@@ -24,15 +24,13 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
 
-      <Hero
+      <PageHeader
         title="Reach out"
         subtitle="Share a little about what you’re seeking and I’ll be in touch."
         eyebrow="Contact"
-        texture="fabric-white-coral"
-        centered
       />
 
-      <Section spacing="lg" texture="texture-2" textureOpacity="medium">
+      <Section spacing="lg" texture="texture-2" textureOpacity="medium" divider>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
             <h2 className="font-rustique text-3xl md:text-4xl text-dark-kakao">

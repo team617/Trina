@@ -19,7 +19,7 @@ export default function FAQ({ items }: FAQProps) {
       {items.map((item, index) => (
         <div
           key={index}
-          className="border border-warm-sand/30 rounded-lg overflow-hidden"
+          className="border border-warm-sand/30 rounded-2xl overflow-hidden bg-white/70"
         >
           <button
             onClick={() => setOpenIndex(openIndex === index ? null : index)}

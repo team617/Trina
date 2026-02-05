@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   },
   description: content.site.description,
   metadataBase: new URL(content.site.url),
+  icons: {
+    icon: '/brand/mark.svg',
+    apple: '/brand/mark.svg',
+  },
 }
 
 export default function RootLayout({

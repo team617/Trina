@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Container from '@/components/ui/Container'
 
 interface SectionProps {
   children: ReactNode
@@ -10,6 +11,8 @@ interface SectionProps {
   id?: string
   texture?: 'texture-1' | 'texture-2' | 'texture-3' | 'fabric-clay' | 'fabric-white-coral' | 'fabric-sand' | 'fabric-kakao'
   textureOpacity?: 'light' | 'medium'
+  divider?: boolean
+  eyebrow?: string
 }
 
 export default function Section({
@@ -22,6 +25,8 @@ export default function Section({
   id,
   texture,
   textureOpacity = 'light',
+  divider = false,
+  eyebrow,
 }: SectionProps) {
   const bgColors = {
     'white-coral': 'bg-white-coral',
@@ -58,19 +63,29 @@ export default function Section({
           <div className={`absolute inset-0 ${overlayClasses[textureOpacity]}`} aria-hidden />
         </>
       )}
-      <div className={`relative container-custom ${centered ? 'text-center' : ''}`}>
+      <Container className={centered ? 'text-center' : ''}>
+        {divider && (
+          <div className="mb-10 flex justify-center">
+            <span className="h-px w-16 bg-soft-clay/50" aria-hidden />
+          </div>
+        )}
+        {eyebrow && (
+          <p className="font-inter text-xs uppercase tracking-[0.35em] text-soft-clay mb-3">
+            {eyebrow}
+          </p>
+        )}
         {title && (
           <h2 className="font-rustique text-3xl md:text-4xl lg:text-5xl text-dark-kakao mb-4 text-balance">
             {title}
           </h2>
         )}
         {subtitle && (
-          <p className="font-inter text-lg text-dark-kakao/70 max-w-2xl mx-auto mb-12 text-balance">
+          <p className="font-inter text-lg text-dark-kakao/70 max-w-3xl mx-auto mb-12 text-balance">
             {subtitle}
           </p>
         )}
         {children}
-      </div>
+      </Container>
     </section>
   )
 }

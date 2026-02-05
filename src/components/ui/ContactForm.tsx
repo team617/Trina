@@ -15,7 +15,7 @@ export default function ContactForm() {
     <form action={formAction} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <label className="space-y-2">
-          <span className="font-inter text-sm text-dark-kakao/80">Full name</span>
+          <span className="font-inter text-sm text-dark-kakao/80">Name</span>
           <input
             name="name"
             required
@@ -57,13 +57,13 @@ export default function ContactForm() {
           name="message"
           rows={5}
           className="w-full rounded-lg border border-warm-sand/40 bg-white/80 px-4 py-3 font-inter text-sm focus:outline-none focus:ring-2 focus:ring-deep-reef"
-          placeholder="Share a little about what you’re seeking."
+          placeholder="Share a little about what you’re seeking. You can keep it simple."
         />
       </label>
 
       <button
         type="submit"
-        className="inline-flex items-center justify-center rounded-lg bg-soft-clay px-6 py-3 font-inter text-sm text-white-coral transition-all duration-200 hover:bg-soft-clay/90"
+        className="inline-flex items-center justify-center rounded-full bg-soft-clay px-6 py-3 font-inter text-sm text-white-coral transition-all duration-200 hover:bg-soft-clay/90"
       >
         Send message
       </button>
@@ -78,7 +78,7 @@ export default function ContactForm() {
       )}
 
       <p className="font-inter text-xs text-dark-kakao/60">
-        Your information is only used to respond to your inquiry. No spam, no sharing.
+        Your information is only used to respond to your inquiry. No mailing lists, no sharing.
       </p>
     </form>
   )

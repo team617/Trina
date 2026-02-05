@@ -8,7 +8,7 @@ export default function PricingCards({ items }: { items: PricingItem[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {items.map((item) => (
-        <div key={item.title} className="bg-white/70 rounded-lg p-6 md:p-8 shadow-sm border border-warm-sand/20">
+        <div key={item.title} className="bg-white/70 rounded-2xl p-6 md:p-8 shadow-sm border border-warm-sand/20">
           <h3 className="font-rustique text-2xl text-dark-kakao mb-3">
             {item.title}
           </h3>

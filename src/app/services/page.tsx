@@ -1,7 +1,7 @@
 import { createMetadata } from '@/lib/metadata'
 import { content } from '@/lib/content'
 import { getBreadcrumbSchema } from '@/lib/structured-data'
-import Hero from '@/components/ui/Hero'
+import PageHeader from '@/components/ui/PageHeader'
 import Section from '@/components/ui/Section'
 import Button from '@/components/ui/Button'
 import Card from '@/components/ui/Card'
@@ -45,15 +45,13 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
 
-      <Hero
+      <PageHeader
         title="How we work together"
         subtitle="Come as you are, with whatever brings you here."
         eyebrow="Services"
-        texture="fabric-white-coral"
-        centered
       />
 
-      <Section spacing="lg" texture="texture-2" textureOpacity="medium">
+      <Section spacing="lg" texture="texture-2" textureOpacity="medium" divider>
         <div className="max-w-3xl mx-auto text-center space-y-6 font-inter text-lg text-dark-kakao/80">
           <p>
             I start with my clients wherever they feel safe right now. It’s not my role to push boundaries or decide
@@ -66,7 +64,7 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      <Section spacing="lg" texture="texture-1">
+      <Section spacing="lg" texture="texture-1" divider>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card background="white" padding="lg">
             <div className="space-y-4">
@@ -128,6 +126,7 @@ export default function ServicesPage() {
         background="warm-sand"
         texture="fabric-sand"
         centered={false}
+        divider
       >
         <div className="space-y-6 font-inter text-lg text-dark-kakao/80 max-w-3xl">
           <p>
@@ -141,7 +140,7 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      <Section spacing="lg" background="warm-sand" texture="fabric-kakao" centered>
+      <Section spacing="lg" background="warm-sand" texture="fabric-kakao" centered divider>
         <p className="font-inter text-xs uppercase tracking-[0.3em] text-soft-clay mb-4">Your journey</p>
         <h2 className="font-rustique text-3xl md:text-4xl text-white-coral mb-6">
           Where will you begin?
@@ -162,17 +161,17 @@ export default function ServicesPage() {
         </div>
       </Section>
 
-      <Section title="Packages & pacing" spacing="lg" centered={false} texture="texture-2">
+      <Section title="Packages & pacing" spacing="lg" centered={false} texture="texture-2" divider>
         <PricingCards items={packages} />
       </Section>
 
-      <Section title="Common questions" spacing="lg" background="warm-sand" texture="fabric-clay" centered={false}>
+      <Section title="Common questions" spacing="lg" background="warm-sand" texture="fabric-clay" centered={false} divider>
         <div className="max-w-3xl mx-auto">
           <FAQ items={content.faqs.services} />
         </div>
       </Section>
 
-      <Section spacing="lg" centered texture="texture-3">
+      <Section spacing="lg" centered texture="texture-3" divider>
         <h2 className="font-rustique text-3xl md:text-4xl text-dark-kakao mb-6">
           Ready to begin?
         </h2>

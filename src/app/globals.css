@@ -78,6 +78,19 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
 }
 
+h1 {
+  font-size: clamp(2.5rem, 4vw, 4.5rem);
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+}
+
 p {
   margin-bottom: 1rem;
 }
@@ -154,6 +167,17 @@ a:hover {
     background-image: var(--texture-fabric-kakao);
     background-size: cover;
     background-position: center;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 600ms ease, transform 600ms ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

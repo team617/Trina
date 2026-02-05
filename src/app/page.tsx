@@ -9,6 +9,9 @@ import FAQ from '@/components/ui/FAQ'
 import BenefitGrid from '@/components/ui/BenefitGrid'
 import ProcessSteps from '@/components/ui/ProcessSteps'
 import Testimonials from '@/components/ui/Testimonials'
+import Callout from '@/components/ui/Callout'
+import IconRow from '@/components/ui/IconRow'
+import HeadingBlock from '@/components/ui/HeadingBlock'
 import Image from 'next/image'
 
 export const metadata = createMetadata({
@@ -30,6 +33,21 @@ export default function Home() {
     {
       title: 'Led by your heart',
       description: 'Reconnect with what matters and move forward with trust.',
+    },
+  ]
+
+  const whoFor = [
+    {
+      title: 'Feeling stretched thin',
+      description: 'If life looks steady on the outside but feels unsettled within.',
+    },
+    {
+      title: 'Ready for a calmer pace',
+      description: 'If you want support that is gentle, grounded, and non‑pushy.',
+    },
+    {
+      title: 'Seeking alignment',
+      description: 'If you want a clearer relationship with your body, mind, and heart.',
     },
   ]
 
@@ -55,6 +73,12 @@ export default function Home() {
       <Section spacing="lg" texture="texture-2" textureOpacity="medium">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
+            <HeadingBlock
+              eyebrow="What it is"
+              title="A calm, integrative path back to yourself"
+              subtitle="We work with the body, the mind, and the heart as an interconnected whole."
+              align="left"
+            />
             <p className="font-inter text-lg text-dark-kakao/80 leading-relaxed">
               Many people feel disconnected and out of alignment with themselves, leading to anxiety and a sense of
               unfulfillment. This work begins by listening — to the body, the mind, and the quiet pull of the heart.
@@ -87,16 +111,27 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section spacing="lg" background="warm-sand" texture="fabric-sand" centered>
-        <h2 className="font-rustique text-3xl md:text-4xl text-dark-kakao mb-6">
-          What alignment can feel like
-        </h2>
+      <Section spacing="lg" background="warm-sand" texture="fabric-sand" centered divider eyebrow="Who it is for">
+        <HeadingBlock
+          title="If you are in a season where…"
+          subtitle="You don’t need the right words. You just need a willingness to begin."
+          align="center"
+        />
+        <IconRow items={whoFor} />
+      </Section>
+
+      <Section spacing="lg" texture="texture-3" centered divider eyebrow="What you get">
+        <HeadingBlock
+          title="What alignment can feel like"
+          subtitle="Steady foundations that support clarity, ease, and heart‑led direction."
+          align="center"
+        />
         <BenefitGrid items={benefits} />
       </Section>
 
       <Section
-        title="How we work together"
-        subtitle="Three entry points to meet you where you are — from gentle exploration to deep transformation."
+        title="Offer options"
+        subtitle="Three pathways to meet you where you are — from gentle exploration to deep transformation."
         spacing="lg"
         texture="texture-1"
         centered={false}
@@ -154,8 +189,8 @@ export default function Home() {
       </Section>
 
       <Section
-        title="Your body is a doorway"
-        subtitle="Alignment, stability, and stillness are a continuous movement — a spiral that supports every level of your being."
+        title="How it works"
+        subtitle="Alignment, stability, and stillness move together — a spiral that supports every level of your being."
         spacing="lg"
         background="warm-sand"
         texture="fabric-white-coral"
@@ -168,10 +203,12 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section spacing="lg" centered texture="texture-3">
-        <h2 className="font-rustique text-3xl md:text-4xl text-dark-kakao mb-6">
-          A simple, supportive process
-        </h2>
+      <Section spacing="lg" centered texture="texture-3" divider eyebrow="How it works">
+        <HeadingBlock
+          title="A simple, supportive process"
+          subtitle="Gentle structure with room for your pace and needs."
+          align="center"
+        />
         <ProcessSteps steps={content.approach.process} />
       </Section>
 
@@ -186,7 +223,7 @@ export default function Home() {
         </Section>
       )}
 
-      <Section spacing="lg" background="warm-sand" texture="fabric-clay" centered>
+      <Section spacing="lg" background="warm-sand" texture="fabric-clay" centered divider>
         <div className="max-w-3xl mx-auto space-y-6 text-center">
           <Image
             src="/illustrations/quote-spiral-1.svg"
@@ -201,13 +238,13 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section title="Questions you might have" spacing="lg" centered={false}>
+      <Section title="Questions you might have" spacing="lg" centered={false} divider>
         <div className="max-w-3xl mx-auto">
           <FAQ items={content.faqs.general} />
         </div>
       </Section>
 
-      <Section spacing="lg" background="warm-sand" centered>
+      <Section spacing="lg" background="warm-sand" centered divider>
         <h2 className="font-rustique text-3xl md:text-4xl text-dark-kakao mb-6">
           Ready to begin?
         </h2>
