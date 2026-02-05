@@ -43,10 +43,10 @@ export default function Hero({
   }
 
   const overlayClass = imageSrc
-    ? 'bg-white-coral/70'
+    ? 'bg-white-coral/55'
     : texture === 'water-wash'
-      ? 'bg-white-coral/35'
-      : 'bg-white-coral/60'
+      ? 'bg-white-coral/20'
+      : 'bg-white-coral/25'
 
   return (
     <section className={`relative overflow-hidden ${bgColors[background]} py-24 md:py-32 lg:py-40`}>
@@ -64,7 +64,7 @@ export default function Hero({
       )}
       {texture && (
         <>
-          <div className={`absolute inset-0 ${textureClasses[texture]} opacity-50`} aria-hidden />
+          <div className={`absolute inset-0 ${textureClasses[texture]} opacity-30`} aria-hidden />
           <div className={`absolute inset-0 ${overlayClass}`} aria-hidden />
         </>
       )}
