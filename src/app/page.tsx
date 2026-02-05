@@ -84,7 +84,7 @@ export default function Home() {
         </div>
       </Hero>
 
-      <Section spacing="lg" texture="texture-2" textureOpacity="medium">
+      <Section spacing="lg" texture="water-wash" textureOpacity="medium" divider eyebrow="What it is">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <HeadingBlock
@@ -125,7 +125,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section spacing="lg" background="warm-sand" texture="fabric-sand" centered divider eyebrow="Who it is for">
+      <Section spacing="lg" background="warm-sand" texture="water-wash" centered divider eyebrow="Who it is for">
         <HeadingBlock
           title="If you are in a season where…"
           subtitle="You don’t need the right words. You just need a willingness to begin."
@@ -143,7 +143,7 @@ export default function Home() {
         <Marquee items={flowWords} />
       </Section>
 
-      <Section spacing="lg" texture="texture-3" centered divider eyebrow="What you get">
+      <Section spacing="lg" texture="water-wash" centered divider eyebrow="What you get">
         <HeadingBlock
           title="What alignment can feel like"
           subtitle="Steady foundations that support clarity, ease, and heart‑led direction."

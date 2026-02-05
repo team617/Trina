@@ -113,7 +113,7 @@ a:hover {
 
   .container-custom {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1180px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1.5rem;
@@ -175,6 +175,13 @@ a:hover {
       radial-gradient(120% 120% at 90% 20%, rgba(1, 69, 68, 0.08) 0%, rgba(248, 240, 233, 0.6) 55%, rgba(248, 240, 233, 0.9) 100%);
     background-size: cover;
     background-position: center;
+  }
+
+  .glass {
+    background: rgba(248, 240, 233, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(209, 188, 168, 0.4);
+    box-shadow: 0 12px 30px rgba(52, 35, 26, 0.08);
   }
 
   .marquee {

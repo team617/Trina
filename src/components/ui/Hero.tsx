@@ -49,7 +49,7 @@ export default function Hero({
       : 'bg-white-coral/60'
 
   return (
-    <section className={`relative overflow-hidden ${bgColors[background]} py-20 md:py-28 lg:py-36`}>
+    <section className={`relative overflow-hidden ${bgColors[background]} py-24 md:py-32 lg:py-40`}>
       {imageSrc && (
         <div className="absolute inset-0">
           <Image
@@ -81,7 +81,7 @@ export default function Hero({
           {title}
         </h1>
         {subtitle && (
-          <p className="font-inter text-lg md:text-xl text-dark-kakao/80 max-w-3xl mx-auto mb-10 text-balance">
+          <p className="font-inter text-lg md:text-xl text-dark-kakao/90 max-w-3xl mx-auto mb-10 text-balance">
             {subtitle}
           </p>
         )}

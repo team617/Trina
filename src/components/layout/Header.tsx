@@ -17,9 +17,9 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 bg-white-coral/95 backdrop-blur-sm border-b border-warm-sand/20">
+    <header className="sticky top-0 z-50">
       <nav className="container-custom py-4 md:py-6">
-        <div className="flex items-center justify-between">
+        <div className="glass rounded-full px-5 py-3 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-4">
             <Image
