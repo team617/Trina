@@ -252,3 +252,11 @@ html {
     animation: none;
   }
 }
+
+/* Force full text opacity for brand readability */
+.text-dark-kakao\/90,
+.text-dark-kakao\/80,
+.text-dark-kakao\/70,
+.text-dark-kakao\/60 {
+  color: var(--color-dark-kakao) !important;
+}
